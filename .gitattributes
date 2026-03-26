@@ -1,0 +1,7 @@
+k.html !text !filter !merge !diff
+reader.js !text !filter !merge !diff
+reader.css !text !filter !merge !diff
+package.json !text !filter !merge !diff
+package-lock.json !text !filter !merge !diff
+index.html !text !filter !merge !diff
+inspect_kindle.py !text !filter !merge !diff
