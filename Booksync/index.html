@@ -1,9 +1,29 @@
 <!DOCTYPE html>
 <head>
-    <title>Book viewer (mode)</title>
+    <title>Book viewer (Index)</title>
+    <link rel="stylesheet" href="index.css">
 </head>
     <body>
         <h1>Pick your e-reader (your syncing from)</h1>
-        <a href="./k.html">Kindle</a><br>
-        <!--<a>Kobo</a>-->
+        <button id="reader"><a  href="./k.html"></a>E-reader</button><br>
+        <button id="e2"><a  href=""></a>placeholder</button><br>
+        <br>
+        <div style="text-align: bottom;margin-left: 1300px;margin-top:500px;">
+           <button id="e3"><a></a>Beta branch</button>
+        </div>
     </body>
+<script>
+    
+// Adding functionality for the buttons
+document.getElementById('reader').addEventListener('click', function() {
+    window.location.href = './k.html';
+    
+});
+
+document.getElementById('e2').addEventListener('click', function() {
+    window.location.href = './index.html';
+});
+document.getElementById('e3').addEventListener('click', function() {
+    window.location.href = 'https://google.com';
+});
+</script>
