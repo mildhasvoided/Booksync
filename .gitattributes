@@ -1,4 +1,4 @@
-cd ./Booksync
+
 books filter=lfs diff=lfs merge=lfs -text
 k.html filter=lfs diff=lfs merge=lfs -text
 package-lock.json filter=lfs diff=lfs merge=lfs -text
