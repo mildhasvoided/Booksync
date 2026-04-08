@@ -1,0 +1,16 @@
+#reader{
+    background-color:transparent;
+    color:red;
+}
+#e2{
+    background-color:transparent;
+    color:blue;
+}
+body{
+    background-color:black;
+    color:white;
+}
+#e3{
+    color:aqua;
+    background-color:transparent
+}
