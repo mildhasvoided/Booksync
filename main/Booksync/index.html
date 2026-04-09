@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <title>Book viewer (Index)</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+    <body>
+        <p>Disclaimer! I do not provide .epub files! Please use your own! For tutorials on how to use the site click <a href="">Link coming soon</a> for tutorials</a></p>
+        <h1>Directory:</h1>
+        <button id="reader"><a  href="./k.html"></a>E-reader</button><br>
+        <!--<button id="e2"><a  href=""></a>placeholder</button><br>-->
+        <br>
+        <div style="text-align: bottom;margin-left: 1300px;margin-top:500px;">
+            <!--Hello reader! If you can see this your welcome to look around!-->
+            <!--But for now this button will remain hidden as it isnt finished :(-->
+           <!--<button id="e3"><a></a>Beta branch</button>-->
+        </div>
+    </body>
+<script>
+    
+// Adding functionality for the buttons
+document.getElementById('reader').addEventListener('click', function() {
+    window.location.href = './k.html';
+    
+});
+
+document.getElementById('e2').addEventListener('click', function() {
+    window.location.href = './index.html';
+});
+document.getElementById('e3').addEventListener('click', function() {
+    window.location.href = 'https://google.com';
+});
+</script>

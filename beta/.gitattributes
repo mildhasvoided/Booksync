@@ -1,0 +1,9 @@
+
+books filter=lfs diff=lfs merge=lfs -text
+k.html filter=lfs diff=lfs merge=lfs -text
+package-lock.json filter=lfs diff=lfs merge=lfs -text
+package.json filter=lfs diff=lfs merge=lfs -text
+index.html filter=lfs diff=lfs merge=lfs -text
+inspect_kindle.py filter=lfs diff=lfs merge=lfs -text
+reader.css filter=lfs diff=lfs merge=lfs -text
+reader.js filter=lfs diff=lfs merge=lfs -text
