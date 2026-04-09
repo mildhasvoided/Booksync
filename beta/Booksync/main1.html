@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <title>Book viewer (Index)</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+    <body>
+        <p>Disclaimer! I do not provide .epub files! Please use your own! For tutorials on how to use the site click <a href="">Link coming soon</a> for tutorials</a></p>
+        <h1>Directory: (beta)</h1>
+        <button id="reader">E-reader</button><br>
+        <!--<button id="e2">placeholder</button><br>-->
+        <br>
+        <div style="text-align: right;margin-left: 1000px;margin-top:400px;">
+            <!--<span>Newest beta update: 4/9/26 (14:09 cdt)</span><br>
+            <button id="e3">Beta branch</button>-->
+
+           <!--this button is for when on beta branch, only unhide it when on there.-->
+           <span>Newest main update: 4/9/26 (14:09 cdt)</span><br>
+           <button id="e9">Return to Index</button>
+        </div>
+    </body>
+<script>
+    
+// Adding functionality for the buttons
+function bindRedirect(buttonId, destination) {
+    const button = document.getElementById(buttonId);
+    if (!button) {
+        return;
+    }
+
+    button.addEventListener('click', function() {
+        window.location.href = destination;
+    });
+}
+
+bindRedirect('reader', './k.html');
+bindRedirect('e2', './index.html');
+bindRedirect('e3', '../../beta/Booksync/main1.html');
+bindRedirect('e9', '../../index.html');
+</script>
