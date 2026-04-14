@@ -70,8 +70,10 @@
             text-align: center;
             line-height: 1.4;
             pointer-events: none; /* Let any clicks pass through it naturally */
-            height: 40px;
+            height: auto;
             width: 120px;
+            opacity: 1;
+            transition: opacity 0.8s ease-in-out;
         }
 
         #info-box * {

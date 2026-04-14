@@ -19,6 +19,9 @@ let rendition;
 let currentCfi = null; // Holds the exact location you are currently reading
 let savedCfi = null;   // Holds a location loaded from a .txt file before the book was opened
 
+// --- Chapter Progress Tracking ---
+let tocPageMap = []; // [{label, startPage}] built once locations are ready
+
 // We are now using a button that calls showOpenFilePicker
 // This allows us to use an ID to remember the last opened directory!
 fileInput.addEventListener('click', async () => {
@@ -82,7 +85,32 @@ fileInput.addEventListener('click', async () => {
         // Grab the total reliably
         totalPages = locations.length; 
         console.log("Pages calculated! Total:", totalPages);
-        
+
+        // Build TOC → page map now that locations are ready
+        // Strategy: for each TOC entry, generate a CFI to the first character of that spine item,
+        // then ask locations what page that CFI lands on.
+        book.loaded.navigation.then(function(nav) {
+            tocPageMap = [];
+            function buildMap(items) {
+                items.forEach(function(item) {
+                    const spineItem = book.spine.get(item.href);
+                    if (spineItem) {
+                        // Construct a CFI pointing to the very start of this spine item
+                        const startCfi = `epubcfi(${spineItem.cfiBase}!/4/2)`;
+                        const page = book.locations.locationFromCfi(startCfi);
+                        const pageNum = (typeof page === 'number' && page >= 0) ? page : null;
+                        if (pageNum !== null) {
+                            tocPageMap.push({ label: item.label.trim(), startPage: pageNum });
+                        }
+                    }
+                    if (item.subitems && item.subitems.length > 0) buildMap(item.subitems);
+                });
+            }
+            buildMap(nav);
+            tocPageMap.sort((a, b) => a.startPage - b.startPage);
+            console.log("TOC page map:", tocPageMap);
+        });
+
         // Step 2: NOW that math is done, safely trigger the load/display of the text sync!
         if (savedCfi) {
             rendition.display(savedCfi);
@@ -376,6 +404,21 @@ document.addEventListener('keyup', (event) => {
 });
 
 // Search Logic
+// Info-box fade: visible on activity, fades out after 10s
+const infoBox = document.getElementById('info-box');
+let infoFadeTimer;
+function resetInfoFade() {
+    infoBox.style.opacity = '1';
+    clearTimeout(infoFadeTimer);
+    infoFadeTimer = setTimeout(() => {
+        infoBox.style.opacity = '0.3';
+    }, 10000);
+}
+document.addEventListener('mousemove', resetInfoFade);
+document.addEventListener('click', resetInfoFade);
+document.addEventListener('keyup', resetInfoFade);
+resetInfoFade();
+
 document.getElementById("search-btn").addEventListener("click", function() {
     const query = document.getElementById("search-input").value;
     const resultsList = document.getElementById("search-results");
