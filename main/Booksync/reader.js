@@ -404,20 +404,22 @@ document.addEventListener('keyup', (event) => {
 });
 
 // Search Logic
-// Info-box fade: visible on activity, fades out after 10s
+// Info-box fade: fades out after 10s, only Shift key brings it back
 const infoBox = document.getElementById('info-box');
 let infoFadeTimer;
-function resetInfoFade() {
-    infoBox.style.opacity = '1';
+function startInfoFade() {
     clearTimeout(infoFadeTimer);
     infoFadeTimer = setTimeout(() => {
-        infoBox.style.opacity = '0.3';
+        infoBox.style.opacity = '0';
     }, 10000);
 }
-document.addEventListener('mousemove', resetInfoFade);
-document.addEventListener('click', resetInfoFade);
-document.addEventListener('keyup', resetInfoFade);
-resetInfoFade();
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Shift') {
+        infoBox.style.opacity = '1';
+        startInfoFade();
+    }
+});
+startInfoFade();
 
 document.getElementById("search-btn").addEventListener("click", function() {
     const query = document.getElementById("search-input").value;
