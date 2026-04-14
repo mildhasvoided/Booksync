@@ -410,7 +410,7 @@ let infoFadeTimer;
 function startInfoFade() {
     clearTimeout(infoFadeTimer);
     infoFadeTimer = setTimeout(() => {
-        infoBox.style.opacity = '0';
+        infoBox.style.opacity = '0.3';
     }, 10000);
 }
 document.addEventListener('keydown', (e) => {
