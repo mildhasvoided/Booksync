@@ -1,0 +1,639 @@
+<!DOCTYPE html><html lang="en" data-scrapbook-source="https://techy-notes.com/remove-drm-from-kindle-ebooks/" data-scrapbook-create="20260410045810032" data-scrapbook-title="DRM Removal from Kindle eBook Purchases"><head>
+    <link rel="stylesheet" href="MILD.css">
+    <title>DRM Removal from Kindle eBook Purchases</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    
+    
+<style>
+	#mildlink{
+	color:red;
+	}
+    @font-face {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: optional;
+        src: url("inter-roman.woff2") format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+</style>
+
+    <link rel="stylesheet" type="text/css" href="screen.css">
+
+    <style>
+        :root {
+            --background-color: #261e1e
+        }
+    </style>
+
+    
+
+    <meta name="description" content="Are you ready to Remove DRM from your Kindle Books Using Kindle for PC 2.8.0?">
+    <link rel="canonical" href="https://techy-notes.com/remove-drm-from-kindle-ebooks/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="Techy-Notes.com">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="DRM Removal from Kindle eBook Purchases">
+    <meta property="og:description" content="Are you ready to Remove DRM from your Kindle Books Using Kindle for PC 2.8.0?">
+    <meta property="og:url" content="https://techy-notes.com/remove-drm-from-kindle-ebooks/">
+    <meta property="og:image" content="https://techy-notes.com/content/images/size/w1200/2026/03/Calibre.png">
+    <meta property="article:published_time" content="2025-09-22T04:30:00.000Z">
+    <meta property="article:modified_time" content="2026-03-30T01:59:21.000Z">
+    <meta property="article:tag" content="DRM">
+    <meta property="article:tag" content="DeDRM">
+    <meta property="article:tag" content="Calibre">
+    <meta property="article:tag" content="Kindle">
+    <meta property="article:tag" content="K4PC">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DRM Removal from Kindle eBook Purchases">
+    <meta name="twitter:description" content="Are you ready to Remove DRM from your Kindle Books Using Kindle for PC 2.8.0?">
+    <meta name="twitter:url" content="https://techy-notes.com/remove-drm-from-kindle-ebooks/">
+    <meta name="twitter:image" content="https://techy-notes.com/content/images/size/w1200/2026/03/Calibre.png">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Jadehawk">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="DRM, DeDRM, Calibre, Kindle, K4PC">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="675">
+    
+    
+
+    <meta name="generator" content="Ghost 6.26">
+    <link rel="alternate" type="application/rss+xml" title="Techy-Notes.com" href="https://techy-notes.com/rss/">
+    <style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style>
+    
+    
+    <link href="https://techy-notes.com/webmentions/receive/" rel="webmention">
+    
+    <link rel="stylesheet" type="text/css" href="cards.min.css">
+    
+    <style>:root {--ghost-accent-color: #035510;}</style>
+    <style>
+/* ============================
+   TABLE OF CONTENTS STYLING
+   ============================ */
+.gh-toc-container {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: inherit;
+  border-left: none;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  color: inherit;
+}
+.gh-toc-title {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: inherit;
+}
+.gh-toc {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.gh-toc > li {
+  margin-bottom: 8px;
+  font-size: 1.05em;
+  font-weight: 600;
+}
+.gh-toc ul {
+  padding-left: 18px;
+  border-left: 2px solid var(--ghost-border-color, #ddd);
+  margin-top: 6px;
+}
+.gh-toc ul li {
+  font-size: 0.95em;
+  font-weight: 400;
+  position: relative;
+  margin-bottom: 6px;
+  padding-left: 10px;
+}
+.gh-toc ul li::before {
+  content: "•";
+  position: absolute;
+  left: -12px;
+  color: var(--ghost-accent-color, #007acc);
+  font-size: 1.2em;
+  line-height: 1;
+}
+.gh-toc a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+.gh-toc a:hover {
+  text-decoration: underline;
+  color: inherit;
+  transform: translateX(3px);
+}
+
+/* ============================
+   COLLAPSIBLE TOC WRAPPER
+   ============================ */
+.gh-toc-wrapper {
+  margin-bottom: 20px;
+  border-left: 4px solid var(--ghost-accent-color, #007acc);
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  background: inherit;
+  overflow: hidden;
+}
+.gh-toc-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 12px 15px;
+  font-weight: bold;
+  font-size: 1.2em;
+  border-bottom: none;
+  color: inherit;
+  transition: background-color 0.2s ease-in-out;
+}
+.gh-toc-header:hover {
+  background-color: rgba(0, 0, 0, 0.30); /* strong hover highlight */
+}
+.gh-toc-icon {
+  margin-right: 10px;
+  font-size: 1.2em;
+  transition: transform 0.2s ease-in-out;
+}
+.gh-toc-header.expanded .gh-toc-icon {
+  transform: rotate(90deg); /* rotate arrow when expanded */
+}
+
+/* Collapsible content */
+#gh-toc-content {
+  padding: 0 15px;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+#gh-toc-content.expanded {
+  opacity: 1;
+}
+</style>
+
+<style>
+/* ============================
+   OVERRIDE LOGO SIZE
+   ============================ */
+.gh-navigation-brand .gh-navigation-logo img {
+  max-height: 100px;   /* increase this value to your liking */
+  height: auto;       /* keep aspect ratio */
+  width: auto;        /* prevent distortion */
+}
+</style>
+ 
+<style>
+/* ============================
+   OVERRIDE CODE BLOCK COLORS
+      (Background & Text)
+   ============================ */
+  pre {
+    background-color: #dfe6e9; /* Muted blue-gray */
+    hyphens: none;
+    line-height: 1.5;
+    overflow-x: scroll;
+    padding: 1.6rem 2.4rem;
+    white-space: pre;
+    -webkit-overflow-scrolling: touch;
+    border-left: 3px solid #007acc; /* Optional accent */
+    border-radius: 4px;
+  }
+
+  pre code {
+    color: #fff; /* white */
+    font-family: monospace;
+    font-size: 0.95em;
+  }
+</style>
+
+<!-- Google tag (gtag.js) -->
+
+
+    <link rel="stylesheet" href="css.css"><style>:root {--gh-font-heading: Libre Baskerville;}</style>
+
+<link rel="shortcut icon" href="favicon-1.ico"></head>
+<body class="post-template tag-drm tag-dedrm tag-calibre tag-kindle tag-k4pc gh-font-heading-libre-baskerville has-sans-title has-sans-body" style="color:white;">
+
+<div class="gh-viewport">
+    
+    <header id="gh-navigation" class="gh-navigation is-left-logo gh-outer">
+    <div class="gh-navigation-inner gh-inner">
+
+        <div class="gh-navigation-brand">
+            <a class="gh-navigation-logo is-title" href="https://techy-notes.com/">
+                    <img src="Publication-Logo-Cropped.png" alt="Techy-Notes.com">
+            </a>
+            <button class="gh-search gh-icon-button" aria-label="Search this site" data-ghost-search="">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>            <button class="gh-burger gh-icon-button" aria-label="Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path></svg>                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>            </button>
+        </div>
+
+        <nav class="gh-navigation-menu">
+            <ul class="nav">
+    <li class="nav-home"><a href="https://techy-notes.com/">Home</a></li>
+    <li class="nav-about"><a href="https://techy-notes.com/about/">About</a></li>
+</ul>
+
+        </nav>
+
+        <div class="gh-navigation-actions">
+                <button class="gh-search gh-icon-button" aria-label="Search this site" data-ghost-search="">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>                <div class="gh-navigation-members">
+                            <a href="#/portal/signin" data-portal="signin">Sign in</a>
+                                <a class="gh-button" href="../index.html" data-portal="signup">Return to main page</a><!--<a>Text How to use the e-reader</a>-->
+                                <a style="color:white;" href="./files/kindle/kindle-2-8-0-70980.exe">Download kindle version</a>
+                                <a style="color:white;"href="https://calibre-ebook.com/download" target="_blank">Download calibre</a>
+                </div>
+        </div>
+
+    </div>
+</header>
+
+    
+
+<main class="gh-main">
+
+    <article class="gh-article post tag-drm tag-dedrm tag-calibre tag-kindle tag-k4pc featured">
+
+        <header class="gh-article-header gh-canvas">
+
+                <a class="gh-article-tag" href="https://techy-notes.com/tag/drm/">DRM</a>
+            <h1 class="gh-article-title is-title">DRM Removal from Kindle eBook Purchases - 2026</h1>
+                <p class="gh-article-excerpt is-body">Are you ready to Remove DRM from your Kindle Books Using Kindle for PC 2.8.0?</p>
+
+            <div class="gh-article-meta">
+                <div class="gh-article-author-image instapaper_ignore">
+                            <a href="https://techy-notes.com/author/jadehawk/">
+                                <img class="author-profile-image" src="Yoda-Mandalorian--cropped--3.png" alt="Jadehawk">
+                            </a>
+                </div>
+                <div class="gh-article-meta-wrapper">
+                    <h4 class="gh-article-author-name"><a href="https://techy-notes.com/author/jadehawk/">Jadehawk</a></h4>
+                    <div class="gh-article-meta-content">
+                        <time class="gh-article-meta-date" datetime="2025-09-22">22 Sep 2025</time>
+                            <span class="gh-article-meta-length"><span class="bull">—</span> 11 min read</span>
+                    </div>
+                </div>
+            </div>
+
+                <figure class="gh-article-image">
+        <img srcset="Calibre.png 320w,
+                    Calibre-1.png 600w,
+                    Calibre-2.png 960w,
+                    Calibre-3.png 1200w,
+                    Calibre-4.png 2000w" sizes="(max-width: 1200px) 100vw, 1120px" src="Calibre-3.png" alt="DRM Removal from Kindle eBook Purchases - 2026">
+    </figure>
+
+        </header>
+
+        <section class="gh-content gh-canvas is-body">
+            <p>Valid as of 03-09-2026</p>
+<!--kg-card-begin: html-->
+<!-- Table of contents -->
+<div class="gh-toc-wrapper">
+  <div class="gh-toc-header">
+    <span class="gh-toc-icon">▶️</span>
+    <span class="gh-toc-title">On This Page:</span>
+  </div>
+  <div class="gh-toc-container" id="gh-toc-content">
+    <div class="toc-placeholder"></div>
+  </div>
+</div>
+<!--kg-card-end: html-->
+<p>(Note from Mildhasvoided here! I mirrored this site (scraped) from <a style="color:red;" href="https://techy-notes.com/remove-drm-from-kindle-ebooks/" target="_blank">here</a> and would like to say that while this is mirrored in a way that if you clone this repo for offline use it will work as fully intended, please occasionally check the <strong><a style="color:red;" href="https://techy-notes.com/remove-drm-from-kindle-ebooks/" target="_blank">official site</a></strong>. Since I use the tool, I will update this page as often as I can for everyone's experience!)</p>
+
+<strong><p>I DID NOT MAKE THIS TUTORIAL I MIRRORED THE PAGE FOR OFFLINE USE!</p></strong>
+<hr><p></p><figure class="kg-card kg-embed-card"><video width="500" height="500" controls preload="metadata" playsinline title="DeDRM (10.0.14) K4PC 2 8 0"><source src="./video/DeDRM (10.0.14) K4PC 2 8 0.mp4" type="video/mp4">Your browser does not support the video tag.</video></figure><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text">Instruction on VIDEO and WRITTEN Tutorial are still valid for Version 10.0.18 only the <b><strong style="white-space: pre-wrap;">tools version changed</strong></b>, everything else is EXACTLY the same.</div></div><p>This tutorial covers the installation and usage of DeDRM <s>v10.0.14</s> <s>v10.0.15</s> v10.0.18 by noDRM (Modded by Satsuoni) for removing DRM protection from Kindle eBooks. This guide is for educational purposes only. Please ensure you comply with your local laws and only remove DRM from books you legally own.</p><p><s>DeDRM v10.0.14</s> <s>DeDRM v10.0.15</s> DeDRM v10.0.18 by noDRM (Modded by Satsuoni) is a powerful tool that allows you to remove Digital Rights Management (DRM) protection from your legally purchased eBooks. This comprehensive guide will walk you through the entire process, from downloading the tools to successfully converting your protected Kindle books into DRM-free formats that you can read on any device.</p><p>This tutorial is designed for general users with step-by-step instructions and plenty of screenshots to make the process as straightforward as possible. No advanced technical knowledge is required.</p><h2 id="what-youll-need">What You'll Need</h2><p>Before we begin, make sure you have:</p><ul><li><strong>Calibre</strong> installed on your computer (the popular eBook management software)</li><li><strong>Kindle books</strong> downloaded to your computer (not just in the cloud) USING ONLY Kindle-For-PC version 2.8.0(70980)<br>-<strong>Kindle-For-PC</strong> you can find it at select the "Download for PC/MAC" (I have only tested this DeDRM in WINDOWS 11)  <a href="https://kindleforpc.s3.amazonaws.com/70980/KindleForPC-installer-2.8.70980.exe?ref=techy-notes.com" rel="noreferrer">HERE</a></li><li><strong>Windows operating system</strong> (this guide is Windows-specific)</li><li><strong>Administrative privileges</strong> on your computer</li></ul><h2 id="step-1-download-dedrm-tools-from-github">Step 1: Download DeDRM Tools from GitHub</h2><p>The first step is to download the latest DeDRM tools from the official GitHub repository. Navigate to the <a href="https://github.com/Satsuoni/DeDRM_tools?ref=techy-notes.com">Satsuoni/DeDRM_tools repository</a>.</p><figure class="kg-card kg-image-card"><img src="Step-01-2-1.png" class="kg-image" alt="Step-01" loading="lazy" title="Step-01" width="1919" height="1031" srcset="Step-01-2.png 600w, Step-01-2-2.png 1000w, Step-01-2-3.png 1600w, Step-01-2-1.png 1919w" sizes="(min-width: 720px) 720px"></figure><p>As you can see in the screenshot, we're visiting the GitHub repository for DeDRM_tools. You'll notice on the right side there's a "Releases" section showing version v10.0.6 as the latest release but we are looking for the PRE release. Click on the "Releases" section to access the download page.</p><h2 id="step-2-download-the-latest-release">Step 2: Download the Latest Release</h2><figure class="kg-card kg-image-card"><img src="Step-02-1-1.png" class="kg-image" alt="Step-02" loading="lazy" title="Step-02" width="1919" height="1028" srcset="Step-02-1.png 600w, Step-02-1-2.png 1000w, Step-02-1-3.png 1600w, Step-02-1-1.png 1919w" sizes="(min-width: 720px) 720px"></figure><p>From the releases page, download the latest PRE Release <s>v10.0.14</s> <s>v10.0.15 </s>v10.0.18 version of DeDRM_tools. The file will typically be named something like <code>DeDRM_tools.zip</code>. Save this file to a location you can easily remember, such as your Downloads folder.</p><h2 id="step-3-extract-the-dedrm-tools">Step 3: Extract the DeDRM Tools</h2><figure class="kg-card kg-image-card"><img src="Step-03-1-1.png" class="kg-image" alt="Step-03" loading="lazy" title="Step-03" width="1918" height="1025" srcset="Step-03-1.png 600w, Step-03-1-2.png 1000w, Step-03-1-3.png 1600w, Step-03-1-1.png 1918w" sizes="(min-width: 720px) 720px"></figure><p>Once downloaded, extract the ZIP file to a folder on your computer. You'll need to access the contents later, so choose a location that's easy to navigate to. The extracted folder will contain various tools and plugins needed for DRM removal.</p><h2 id="step-4-extracted-plugin-for-calibre">Step 4: Extracted Plugin for Calibre</h2><figure class="kg-card kg-image-card"><img src="Step-04-1-1.png" class="kg-image" alt="Step-04" loading="lazy" title="Step-04" width="1919" height="1033" srcset="Step-04-1.png 600w, Step-04-1-2.png 1000w, Step-04-1-3.png 1600w, Step-04-1-1.png 1919w" sizes="(min-width: 720px) 720px"></figure><p>Launch Calibre on your computer. If you don't have Calibre installed, you can download it for free from <a href="https://calibre-ebook.com/?ref=techy-notes.com">calibre-ebook.com</a>. Calibre is essential for this process as it will host the DeDRM plugin and manage your eBook library. Highlighted is the file we will need in step 07, to add to Calibre.</p><h2 id="step-5-access-calibre-preferences-and-plugins-section">Step 5: Access Calibre Preferences and Plugins Section</h2><figure class="kg-card kg-image-card"><img src="Step-05-1-2.png" class="kg-image" alt="Step-05" loading="lazy" title="Step-05" width="1919" height="1037" srcset="Step-05-1.png 600w, Step-05-1-1.png 1000w, Step-05-1-3.png 1600w, Step-05-1-2.png 1919w" sizes="(min-width: 720px) 720px"></figure><p>In Calibre, click on the "Preferences" button in the toolbar (highlighted with the red arrow in the screenshot). This will open the Preferences window where we can manage plugins and other settings.</p><h2 id="step-6-navigate-to-plugins-section">Step 6: Navigate to Plugins Section</h2><figure class="kg-card kg-image-card"><img src="Step-06-1-1.png" class="kg-image" alt="Step-06" loading="lazy" title="Step-06" width="1919" height="1035" srcset="Step-06-1.png 600w, Step-06-1-2.png 1000w, Step-06-1-3.png 1600w, Step-06-1-1.png 1919w" sizes="(min-width: 720px) 720px"></figure><p>In the Preferences window, look for the "Load Plugin from file" section at the bottom. Click on it to load the file we extracted from DeDRM_tools.zip this is how we install plugins that are NOT available via the Calibre store due to legal requirements.</p><h2 id="step-7-load-plugin-from-file-part-1">Step 7: Load Plugin from File Part #1</h2><figure class="kg-card kg-image-card"><img src="Step-07-1-1.png" class="kg-image" alt="Step-07" loading="lazy" title="Step-07" width="1919" height="1033" srcset="Step-07-1.png 600w, Step-07-1-2.png 1000w, Step-07-1-3.png 1600w, Step-07-1-1.png 1919w" sizes="(min-width: 720px) 720px"></figure><p>You'll now see the Plugins management interface. This is where Calibre displays all installed plugins and allows you to add new ones. We need to install the DeDRM plugin from the files we downloaded earlier.</p><h2 id="step-8-load-plugin-from-file-part-2">Step 8: Load Plugin from File Part #2</h2><figure class="kg-card kg-image-card"><img src="Step-08-1-1.png" class="kg-image" alt="Step-08" loading="lazy" title="Step-08" width="1919" height="1032" srcset="Step-08-1.png 600w, Step-08-1-3.png 1000w, Step-08-1-2.png 1600w, Step-08-1-1.png 1919w" sizes="(min-width: 720px) 720px"></figure><p>Just click "YES" on this step</p><h2 id="step-9-load-plugin-from-file-part-3">Step 9: Load Plugin from File Part #3</h2><figure class="kg-card kg-image-card"><img src="Step-09-1-1.png" class="kg-image" alt="Step-09" loading="lazy" title="Step-09" width="1919" height="1033" srcset="Step-09-1.png 600w, Step-09-1-2.png 1000w, Step-09-1-3.png 1600w, Step-09-1-1.png 1919w" sizes="(min-width: 720px) 720px"></figure><p>And on this Step click on "Restart Calibre now" once we restart the plugin will be installed and loaded in Calibre.</p><h2 id="step-10-configure-the-dedrm-plugin">Step 10: Configure the DeDRM Plugin</h2><figure class="kg-card kg-image-card"><img src="Step-10-1-1.png" class="kg-image" alt="Step-10" loading="lazy" title="Step-10" width="1919" height="1032" srcset="Step-10-1.png 600w, Step-10-1-3.png 1000w, Step-10-1-2.png 1600w, Step-10-1-1.png 1919w" sizes="(min-width: 720px) 720px"></figure><p>After restarting if you look again under Calibre Preferences / Plugins / File Type &gt;&gt;&gt; You will see the new Plugin DeDRM <s>v10.0.14</s> <s>v10.0.15</s> v10.0..17 nstalled, if you Double Click it, you will open the configuration section<br>Unfortunately at this point we do not yet have the needed files to add to this screen, but if my script runs without issues this will be populated for you, in the event is not, well you know where to come to<br>do it manually.</p><p>The plugin needs to know where to find your Kindle encryption keys. You can either:</p><ul><li>Let the script automatically add your keys</li><li>Manually point it to a key file (kindlekey.txt)</li></ul><h2 id="step-10a-addendum-almost-forgot">Step 10a: Addendum!! Almost forgot!</h2><figure class="kg-card kg-image-card"><img src="Step-10a-1.png" class="kg-image" alt="Step-10a" loading="lazy" title="Step-10a" width="1455" height="1034" srcset="Step-10a-1-2.png 600w, Step-10a-1-1.png 1000w, Step-10a-1.png 1455w" sizes="(min-width: 720px) 720px"></figure><p>You need to make sure you install the "KFX Input" plugin from the "Get ne Plugins" Section in Calibre, This is the Calibre plugin store where you can find tons of fantastic and useful plugins to super charge your Calibre installation!.</p><h2 id="step-11-lets-buy-2-new-books-book-1">Step 11: Lets buy 2 new books (Book #1)</h2><figure class="kg-card kg-image-card"><img src="Step-11-1-2.png" class="kg-image" alt="Step-11" loading="lazy" title="Step-11" width="1919" height="1028" srcset="Step-11-1.png 600w, Step-11-1-1.png 1000w, Step-11-1-3.png 1600w, Step-11-1-2.png 1919w" sizes="(min-width: 720px) 720px"></figure><p>Notice this books was published on May 2, 2025</p><h2 id="step-12-lets-buy-2-new-books-book-2">Step 12: Lets buy 2 new books (Book #2)</h2><figure class="kg-card kg-image-card"><img src="Step-12-1-3.png" class="kg-image" alt="Step-12" loading="lazy" title="Step-12" width="1919" height="1024" srcset="Step-12-1.png 600w, Step-12-1-1.png 1000w, Step-12-1-2.png 1600w, Step-12-1-3.png 1919w" sizes="(min-width: 720px) 720px"></figure><p>And this was published September 19, 2025 just 3 days ago.</p><h2 id="step-13-open-kindle-for-pc">Step 13: Open Kindle-For-PC</h2><figure class="kg-card kg-image-card"><img src="Step-13a-1-1.png" class="kg-image" alt="Step-13" loading="lazy" title="Step-13" width="961" height="1003" srcset="Step-13a-1.png 600w, Step-13a-1-1.png 961w" sizes="(min-width: 720px) 720px"></figure><p>Open your latest version HAS TO BE 2.8.0(70980) version of Kindle-For-PC (K4PC), Click on Sync, and you should see your 2 new purchased books in the list.</p><h2 id="step-14-download-the-books-to-your-pc">Step 14: Download the books to your PC</h2><figure class="kg-card kg-image-card"><img src="Step-14a-1-1.png" class="kg-image" alt="Step-14" loading="lazy" title="Step-14" width="960" height="1001" srcset="Step-14a-1.png 600w, Step-14a-1-1.png 960w" sizes="(min-width: 720px) 720px"></figure><p>You need to double click to the books to have K4PC download your books to your PC. If you left everything default, the books should be downloaded to a folder inside your "DOCUMENTS" folder called "My Kindle Content".<br>You can see the "New" and the 'Check Mark" overlays when the books are already saved in your PC, you can close K4PC if you want now.</p><h2 id="step-15-verify-downloaded-books-and-tools">Step 15: Verify Downloaded Books and Tools</h2><figure class="kg-card kg-image-card"><img src="Step-15-1-2.png" class="kg-image" alt="Step-15" loading="lazy" title="Step-15" width="1919" height="287" srcset="Step-15-1.png 600w, Step-15-1-1.png 1000w, Step-15-1-3.png 1600w, Step-15-1-2.png 1919w" sizes="(min-width: 720px) 720px"></figure><p>As shown in the screenshot, you should now have:</p><ul><li>Your downloaded Encrypted Kindle books (the .ebook files)</li><li>The KFXKeyExtractor28.exe from the DeDRM folder</li><li>My Kindle_key_finder.zip that contains the same KFXKeyExtractor28.exe found on the Github repo as part of the DeDRM_tools, and my python script, and a batch file to lauch the python script</li><li>Script can be downloaded Here:</li></ul><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text">New script version. Launch using "<i><em class="italic" style="white-space: pre-wrap;">Run_keyfinder.bat</em></i>" If this fails (Usually Windows Access Violation) Try again with Admin Rights (<i><b><strong class="italic" style="white-space: pre-wrap;">Preferred</strong></b></i>) "<b><strong style="white-space: pre-wrap;">Run_keyfinder_admin.vbs</strong></b>"<br><br>All Calibre Plugins are now included in the same zip file "/code/Calibre-Plugins"</div></div><div class="kg-card kg-file-card"><a class="kg-file-card-container" href="https://techy-notes.com/content/files/2026/03/Kindle_Key_Finder_2026.03.29.JH.zip" title="Download" download=""><div class="kg-file-card-contents"><div class="kg-file-card-title">Kindle_Key_Finder_2026.03.29.JH</div><div class="kg-file-card-caption">Improved logs, for better troubleshooting</div><div class="kg-file-card-metadata"><div class="kg-file-card-filename">Kindle_Key_Finder_2026.03.29.JH.zip</div><div class="kg-file-card-filesize">2 MB</div></div></div><div class="kg-file-card-icon"><svg viewBox="0 0 24 24"><defs><style>.a{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}</style></defs><title>download-circle</title><polyline class="a" points="8.25 14.25 12 18 15.75 14.25"></polyline><line class="a" x1="12" y1="6.75" x2="12" y2="18"></line><circle class="a" cx="12" cy="12" r="11.25"></circle></svg></div></a></div><div class="kg-card kg-file-card"><a class="kg-file-card-container" href="https://techy-notes.com/content/files/2026/03/Kindle_Key_Finder_2026.03.25.JH.zip" title="Download" download=""><div class="kg-file-card-contents"><div class="kg-file-card-title">Kindle_Key_Finder_2026.03.25.JH</div><div class="kg-file-card-caption">Fix Bug that Prevented KFXArchiver from running when K4PC version was not 2.8.0</div><div class="kg-file-card-metadata"><div class="kg-file-card-filename">Kindle_Key_Finder_2026.03.25.JH.zip</div><div class="kg-file-card-filesize">2 MB</div></div></div><div class="kg-file-card-icon"><svg viewBox="0 0 24 24"><defs><style>.a{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}</style></defs><title>download-circle</title><polyline class="a" points="8.25 14.25 12 18 15.75 14.25"></polyline><line class="a" x1="12" y1="6.75" x2="12" y2="18"></line><circle class="a" cx="12" cy="12" r="11.25"></circle></svg></div></a></div><div class="kg-card kg-file-card"><a class="kg-file-card-container" href="https://techy-notes.com/content/files/2026/03/Kindle_Key_Finder_2026.03.24.JH.zip" title="Download" download=""><div class="kg-file-card-contents"><div class="kg-file-card-title">Kindle_Key_Finder_2026.03.24.JH</div><div class="kg-file-card-caption">Added Extra INFO to the LOGS HEADER</div><div class="kg-file-card-metadata"><div class="kg-file-card-filename">Kindle_Key_Finder_2026.03.24.JH.zip</div><div class="kg-file-card-filesize">2 MB</div></div></div><div class="kg-file-card-icon"><svg viewBox="0 0 24 24"><defs><style>.a{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}</style></defs><title>download-circle</title><polyline class="a" points="8.25 14.25 12 18 15.75 14.25"></polyline><line class="a" x1="12" y1="6.75" x2="12" y2="18"></line><circle class="a" cx="12" cy="12" r="11.25"></circle></svg></div></a></div><div class="kg-card kg-file-card"><a class="kg-file-card-container" href="https://techy-notes.com/content/files/2026/03/Kindle_Key_Finder_2026.03.23.JH.zip" title="Download" download=""><div class="kg-file-card-contents"><div class="kg-file-card-title">Kindle_Key_Finder_2026.03.23.JH</div><div class="kg-file-card-caption">Added Comic/Manja PDF conversion Auto Detection. (Sort off).</div><div class="kg-file-card-metadata"><div class="kg-file-card-filename">Kindle_Key_Finder_2026.03.23.JH.zip</div><div class="kg-file-card-filesize">2 MB</div></div></div><div class="kg-file-card-icon"><svg viewBox="0 0 24 24"><defs><style>.a{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}</style></defs><title>download-circle</title><polyline class="a" points="8.25 14.25 12 18 15.75 14.25"></polyline><line class="a" x1="12" y1="6.75" x2="12" y2="18"></line><circle class="a" cx="12" cy="12" r="11.25"></circle></svg></div></a></div><div class="kg-card kg-callout-card kg-callout-card-red"><div class="kg-callout-emoji">🚨</div><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">DO NOT BE A BETA TESTER</strong></b><br>Stick to <a href="https://kindleforpc.s3.amazonaws.com/70980/KindleForPC-installer-2.8.70980.exe?ref=techy-notes.com" rel="noreferrer">K4PC version 2.8.0</a>, tool tested on 2.8.3 but meant for 2.8.0 You have been warned.</div></div><p></p><p>The screenshot shows the path to where books are downloaded and the content of the script and KFXKeyExtractor28.exe from the DeDRM folder.</p><h2 id="step-16-time-to-run-the-script">Step 16: Time to run the Script!!</h2><figure class="kg-card kg-image-card"><img src="Step-16-1-1.png" class="kg-image" alt="" loading="lazy" width="1919" height="964" srcset="Step-16-1.png 600w, Step-16-1-2.png 1000w, Step-16-1-3.png 1600w, Step-16-1-1.png 1919w" sizes="(min-width: 720px) 720px"></figure><p>You should pick a permanent folder where to save the script files, since we will point the DeDRM Plugin we installed in Calibre to the files we are about to generate, so its preferable to make a new home for them, I like to keep them in the same folder where the new kindle books are saved in my case is : "C:\Users\Admin\Documents\My Kindle Content" and a new folder called "Key_Finder".</p><p>Run the batch file "Run_keyfinder_admin.vbs" and watch the magic that Satsuoni has created with his KFXKeyExtractor &amp; <strong>KFXArchiver (NEW since v10.0.17)</strong>!!!</p><h2 id="step-17-apply-configuration">Step 17: Apply Configuration</h2><figure class="kg-card kg-image-card"><img src="Step-17-1-1.png" class="kg-image" alt="Step-17" loading="lazy" title="Step-17" width="1919" height="1032" srcset="Step-17-1.png 600w, Step-17-1-2.png 1000w, Step-17-1-3.png 1600w, Step-17-1-1.png 1919w" sizes="(min-width: 720px) 720px"></figure><p>If all went well with the script you are technically done with the plugin configuration. BUT you should still swing by the plugin settings again and see if my script populated that empty box we had earlier, as you can see in this screenshot, there is text already inside the empty box, is actually pointing to the "kindlekey.txt" that should be in the same folder from where you ran "Run key_finder.bat", The program also created another file called "kindlekey.k4i" it may not be required but you can add this to the "Kindle for MAC.PC Ebooks" the button right above our now populated box.</p><h2 id="step-18-test-with-the-new-kindle-books">Step 18: Test with the new Kindle Books</h2><figure class="kg-card kg-image-card"><img src="Step-18-1-1.png" class="kg-image" alt="Step-18" loading="lazy" title="Step-18" width="1919" height="1032" srcset="Step-18-1.png 600w, Step-18-1-2.png 1000w, Step-18-1-3.png 1600w, Step-18-1-1.png 1919w" sizes="(min-width: 720px) 720px"></figure><p>Add our new DRM-protected Kindle books to your Calibre library (Drag and Drop works best for me). If everything is configured correctly and Keys where successfully extracted, the DeDRM plugin will automatically remove the DRM protection when you import the book. You will endup with a books in Calibre in KFX format, that you can then convert to EPUB.</p><h2 id="step-19-successful-drm-removal">Step 19: Successful DRM Removal</h2><figure class="kg-card kg-image-card"><img src="Step-19-1-1.png" class="kg-image" alt="Step-19" loading="lazy" title="Step-19" width="964" height="1030" srcset="Step-19-1.png 600w, Step-19-1-1.png 964w" sizes="(min-width: 720px) 720px"></figure><p>The screenshot shows the final result in Calibre with successfully converted books that are no longer DRM-protected. You can delete the KFX format after you have a clean EPUB for storage and transfering to your other non amazon ereaders (Kobo,Boox) it's what I do.</p><hr><h2 id="whats-the-catch-22-with-this-method">What's the Catch-22 with this method?:</h2><p>The catch is simple, you must run the script or KeyExtractor EVERYTIME you download new books, the old method did not need you to, but with the latest DRM added to books released after April 2025, this is now required if you want to use the latest K4PC version 2.8.0(70980), you can go back to the old method, but you will need to transfer books published after April 2025 to your physical kindle and then from the kindle to Calibre. You pick your method. I like this better, much faster.</p><h2 id="troubleshooting-common-issues">Troubleshooting Common Issues</h2><h3 id="plugin-installation-problems">Plugin Installation Problems</h3><ul><li>Make sure you're using the correct plugin file from the DeDRM_tools package</li><li>Restart Calibre after installing the plugin</li><li>Check that you have the latest version of both Calibre and DeDRM tools</li><li>Make sure you also have "KFX Input" plugin installed, or else you can not IMPORT "KFX books" which is technically what the .azw becomes during the drag and drop operation into Calibre</li><li>Make sure you are running the OFFICIAL VERSION of python from python.org and not the 'Microsoft Store" version, this version runs in a "sandbox" environment blocking read/write access we need.</li></ul><h3 id="key-extraction-issues">Key Extraction Issues</h3><ul><li>Ensure your Kindle books are actually downloaded to your computer</li><li>Try downloading more books, tool need to actually extract keys from KFX books and not all books have them so the more books you download before you run the Extractor, the better change to actually Extract keys.</li><li>Make sure you're using the correct version of the key extractor for your Kindle app version</li></ul><p><strong>----- NEW FIND -----</strong></p><ul><li>YMMV, but I confirmed this issue with the help of another user:</li><li>Make sure only <strong><em>ONE (1)</em></strong> copy of K4PC is registered in your Amazon account. I had 2 copies, one on laptop and then a new one (Main PC) when creating the video tutorial, The version on laptop stop generating keys, and eventually so did the version on main PC. After deregistering all K4PC and resigning back on a single machine, all went back to normal, so keep this in mind.</li></ul><h3 id="books-not-converting">Books Not Converting</h3><ul><li>Verify that the kindlekey.txt file was created successfully</li><li>Check that the DeDRM plugin is pointing to the correct key file</li><li>Some newer Kindle formats may require updated tools</li></ul><h3 id="format-issues">Format Issues</h3><ul><li>If you get KFX-ZIP files instead of KFX files, the DRM removal may not have worked properly <strong><em>(Unless Using KFXArchiver as this tool GENERATES KFX_ZIP file formatted DRM FREE books - Tools added on v10.0.17)</em></strong></li><li>Try re-extracting your keys and reconfiguring the plugin</li></ul><h2 id="manual-key-extraction-method">Manual Key Extraction Method:</h2><p>In the event you are unable to run the script at all and want to do it manually, here is how is done:<br>There are 2 Tools included in the Code/Tools folder.<br>KFXKEYEXTRACTORxxx.exe and KFXARCHIVERxxx.exe both have close but different run commands, @Satsuoni made the tools is a way that they can be started from anywhere and they will attempt to locate your kindle for pc installation, however @Satsuoni does recommend running tools from the kindle installation folder directly.</p><h3 id="for-kfxkeyextractor">For KFXKeyExtractor:</h3><p>The command is as follow, I will use the path as it is in "MY LAPTOP", yours will differ slightly.</p><pre><code class="language-code">KFXKeyExtractor282.exe "C:\Users\Admin\Documents\My Kindle Content" KindleKeys.txt KindleKeys.k4i
+</code></pre>
+<p>This equals to <strong>KFXKeyExtractor "path-to-new-downloaded-kindle-books" "file-that-will-store-extracted-keys" "file-that-will-store-kindle-account-keys"</strong><br><br>You will then pass these 2 generated files to the Calibre DeDRM Plugin using the Plugins GUI.</p><h3 id="for-kfxarchiver">For KFXARCHIVER:</h3><pre><code class="language-code">KFXArchiver283.exe "C:\Users\Admin\Documents\My Kindle Content" "C:\Users\Admin\Documents\My Kindle Content\Extracted_Books" KindleKeys.k4i
+</code></pre>
+<p>This equals to <strong>KFXArchiver "path-to-new-downloaded-kindle-books" "path-to-where-decrypted-books-will-be-written-to-THIS-PATH-MUST-EXIST-PRIOR-OF-RUNNING-TOOL" "file-that-will-store-kindle-account-keys"</strong><br><br>This will generate the file with your kindle account keys (KindleKeys.k4i) however is NOT NEEDED if using KFXArchiver.<br>You will find ALL your successfully DeDRMed books in the OUTPUT folder you provided, all books will be in KFX-ZIP format but will import as KFX into calibre, just drag-and-drop into Calibre, make sure you have KFX Plugin installed.</p><hr><p></p><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">Legal Disclaimer</strong></b>: <br>This tutorial is for educational purposes only. DRM removal should only be performed on books you legally own. Always comply with your local copyright laws and the terms of service of your eBook retailer. The purpose of DRM removal should be to create personal backups or to read your legally purchased books on different devices</div></div><h2 id=""></h2><hr><h2 id="conclusion">Conclusion</h2><p>You now have a fully functional DeDRM setup that can remove DRM protection from your Kindle eBooks. This allows you to:</p><ul><li><strong>Create backups</strong> of your legally purchased books</li><li><strong>Read books on any device</strong> or eBook reader</li><li><strong>Convert between formats</strong> (EPUB, MOBI, PDF, etc.)</li><li><strong>Preserve your library</strong> independent of any single platform</li></ul><p>Remember to keep your DeDRM tools updated as Amazon occasionally changes their DRM methods. The community actively maintains these tools to ensure compatibility with the latest Kindle formats.</p><p><strong>Happy reading!</strong></p><hr><h2 id="selfish-plug"><strong>Selfish Plug:</strong></h2><p>If you found this content useful, please swing by my YouTube channel and subscribe. I need as much help from you guys as I can. Thx<br>Here is the link:<br></p><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://www.youtube.com/@jadehawk?ref=techy-notes.com"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Techy-Notes</div><div class="kg-bookmark-description">Collection of things I find Interesting, reviews and the occasional tutorial.</div><div class="kg-bookmark-metadata"><img class="kg-bookmark-icon" src="favicon_144x144-3.png" alt=""><span class="kg-bookmark-author">YouTube</span></div></div><div class="kg-bookmark-thumbnail"><img src="wtIYtc2YpXjHUqDZm0r-03c9S-0de0XrfudNdrtcnnIBpNxW3qFE6-QvMfh6rUXnSUhy83Wqf48-s900-c-k-c0x00ffffff-no-rj-3" alt=""></div></a></figure><p>Also have a <strong>BuyMeCoffee</strong> Link if so inclined.</p><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://buymeacoffee.com/jadehawk?ref=techy-notes.com"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Techy-Notes is Tutorials</div><div class="kg-bookmark-description">Thank you for the Coffee or Beer, I am glad my tutorials or Random web tool were helpful.</div><div class="kg-bookmark-metadata"><img class="kg-bookmark-icon" src="apple-icon-180x180-912350ec-3.png" alt=""><span class="kg-bookmark-author">Buy Me a Coffee</span></div></div><div class="kg-bookmark-thumbnail"><img src="og_8648650_1759932006-3.jpg" alt=""></div></a></figure>
+        </section>
+
+    </article>
+
+        <div class="gh-comments gh-canvas">
+            
+        
+    
+        </div>
+
+</main>
+
+
+            <section class="gh-container is-grid gh-outer">
+                <div class="gh-container-inner gh-inner">
+                    <h2 class="gh-container-title">Read more</h2>
+                    <div class="gh-feed">
+                            <article class="gh-card post">
+    <a class="gh-card-link" href="https://techy-notes.com/booklists-free-link-extractor/">
+            <figure class="gh-card-image">
+                <img srcset="Cover-2-2.png 160w,
+                            Cover-2.png 320w,
+                            Cover-2-1.png 600w,
+                            Cover-2-3.png 960w,
+                            Cover-2-4.png 1200w,
+                            Cover-2-6.png 2000w" sizes="320px" src="Cover-2-5.png" alt="Booklists &quot;Free&quot; Link Extractor" loading="lazy">
+            </figure>
+        <div class="gh-card-wrapper">
+            <h3 class="gh-card-title is-title">Booklists "Free" Link Extractor</h3>
+                    <p class="gh-card-excerpt is-body">▶️
+On this page:
+
+
+
+
+
+
+
+
+
+Are you, like me, subscribed to a few booklist that send you daily emails with links for FREE and discounted eBooks and it takes a few minutes to go thru all your lists to find just the "FREE" links.
+
+How about a way to click</p>
+            <footer class="gh-card-meta">
+<!--
+             -->
+                    <span class="gh-card-author">By Jadehawk</span>
+                    <time class="gh-card-date" datetime="2026-02-10">10 Feb 2026</time>
+
+                <!--
+         --></footer>
+        </div>
+    </a>
+</article>
+                            <article class="gh-card post">
+    <a class="gh-card-link" href="https://techy-notes.com/booklore-email-to-kindle/">
+            <figure class="gh-card-image">
+                <img srcset="Cover-1.png 160w,
+                            Cover.png 320w,
+                            Cover-3.png 600w,
+                            Cover-4.png 960w,
+                            Cover-5.png 1200w,
+                            Cover-6.png 2000w" sizes="320px" src="Cover-7.png" alt="Booklore - Email to Kindle" loading="lazy">
+            </figure>
+        <div class="gh-card-wrapper">
+            <h3 class="gh-card-title is-title">Booklore - Email to Kindle</h3>
+                    <p class="gh-card-excerpt is-body">▶️
+On this page:
+
+
+
+
+
+
+
+
+
+So you are part of a Booklore server and wanted to know how to send the books from the Booklore server directly to your kindle, there area few things that must be set correctly fo this to work.
+Steps needed by the Booklore Admin (Must be done</p>
+            <footer class="gh-card-meta">
+<!--
+             -->
+                    <span class="gh-card-author">By Jadehawk</span>
+                    <time class="gh-card-date" datetime="2026-02-03">03 Feb 2026</time>
+                <!--
+         --></footer>
+        </div>
+    </a>
+</article>
+                            <article class="gh-card post">
+    <a class="gh-card-link" href="https://techy-notes.com/table-of-content-for-ghost-cms/">
+            <figure class="gh-card-image">
+                <img srcset="TOC-2-1.png 160w,
+                            TOC-2.png 320w,
+                            TOC-2-2.png 600w,
+                            TOC-2-3.png 960w,
+                            TOC-2-5.png 1200w,
+                            TOC-2-6.png 2000w" sizes="320px" src="TOC-2-4.png" alt="Table of Content for Ghost CMS" loading="lazy">
+            </figure>
+        <div class="gh-card-wrapper">
+            <h3 class="gh-card-title is-title">Table of Content for Ghost CMS</h3>
+                <p class="gh-card-excerpt is-body">Add Simple TOC to your Ghost-CMS Blog Post.</p>
+            <footer class="gh-card-meta">
+<!--
+             -->
+                    <span class="gh-card-author">By Jadehawk</span>
+                    <time class="gh-card-date" datetime="2025-11-30">30 Nov 2025</time>
+                <!--
+         --></footer>
+        </div>
+    </a>
+</article>
+                            <article class="gh-card post">
+    <a class="gh-card-link" href="https://techy-notes.com/remove-drm-from-kobo-ebooks/">
+            <figure class="gh-card-image">
+                <img srcset="Kobo-My-Books-3.png 160w,
+                            Kobo-My-Books-3-1.png 320w,
+                            Kobo-My-Books-3-2.png 600w,
+                            Kobo-My-Books-3-3.png 960w,
+                            Kobo-My-Books-3-4.png 1200w,
+                            Kobo-My-Books-3-5.png 2000w" sizes="320px" src="Kobo-My-Books-3-6.png" alt="DRM Removal from Kobo eBook Purchases" loading="lazy">
+            </figure>
+        <div class="gh-card-wrapper">
+            <h3 class="gh-card-title is-title">DRM Removal from Kobo eBook Purchases</h3>
+                    <p class="gh-card-excerpt is-body">▶️
+On This Page:
+
+
+
+
+
+
+
+
+Kobo has lenient DRM security, not as restrictive as Amazon’s (which has been getting worse).
+For now, Kobo still uses Adobe DRM, which protects the book with the buyer’s email address as proof of purchase.
+
+To remove this restriction and allow you to read your</p>
+            <footer class="gh-card-meta">
+<!--
+             -->
+                    <span class="gh-card-author">By Jadehawk</span>
+                    <time class="gh-card-date" datetime="2025-11-28">28 Nov 2025</time>
+                <!--
+         --></footer>
+        </div>
+    </a>
+</article>
+                    </div>
+                </div>
+            </section>
+
+    
+    <footer class="gh-footer gh-outer">
+    <div class="gh-footer-inner gh-inner">
+
+        <div class="gh-footer-bar">
+            <span class="gh-footer-logo is-title">
+                    <img src="Publication-Logo-Cropped.png" alt="Techy-Notes.com">
+            </span>
+            <nav class="gh-footer-menu">
+                <ul class="nav">
+    <li class="nav-sign-up"><a href="#/portal/">Sign up</a></li>
+</ul>
+
+            </nav>
+            <div class="gh-footer-copyright">
+                Powered by <a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a>
+            </div>
+        </div>
+
+                <section class="gh-footer-signup">
+                    <h2 class="gh-footer-signup-header is-title">
+                        Techy-Notes.com
+                    </h2>
+                    <p class="gh-footer-signup-subhead is-body">
+                        A Small Collection of Tutorials and Notes
+                    </p>
+                    <form class="gh-form" data-members-form="">
+    <input class="gh-form-input" id="footer-email" name="email" type="email" placeholder="jamie@example.com" required="" data-members-email="" value="">
+    <button class="gh-button" type="submit" aria-label="Subscribe">
+        <span><span>Subscribe</span> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"></path></svg></span>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24">
+    <g stroke-linecap="round" stroke-width="2" fill="currentColor" stroke="none" stroke-linejoin="round" class="nc-icon-wrapper">
+        <g class="nc-loop-dots-4-24-icon-o">
+            <circle cx="4" cy="12" r="3"></circle>
+            <circle cx="12" cy="12" r="3"></circle>
+            <circle cx="20" cy="12" r="3"></circle>
+        </g>
+        <style data-cap="butt">
+            .nc-loop-dots-4-24-icon-o{--animation-duration:0.8s}
+            .nc-loop-dots-4-24-icon-o *{opacity:.4;transform:scale(.75);animation:nc-loop-dots-4-anim var(--animation-duration) infinite}
+            .nc-loop-dots-4-24-icon-o :nth-child(1){transform-origin:4px 12px;animation-delay:-.3s;animation-delay:calc(var(--animation-duration)/-2.666)}
+            .nc-loop-dots-4-24-icon-o :nth-child(2){transform-origin:12px 12px;animation-delay:-.15s;animation-delay:calc(var(--animation-duration)/-5.333)}
+            .nc-loop-dots-4-24-icon-o :nth-child(3){transform-origin:20px 12px}
+            @keyframes nc-loop-dots-4-anim{0%,100%{opacity:.4;transform:scale(.75)}50%{opacity:1;transform:scale(1)}}
+        </style>
+    </g>
+</svg>        <span>Email sent</span>
+    </button>
+    <p data-members-error=""></p>
+</form>
+                </section>
+
+    </div>
+</footer>    
+</div>
+
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</body></html>
