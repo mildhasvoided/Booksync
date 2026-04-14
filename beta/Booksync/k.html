@@ -1,3 +1,66 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2492cb89f902ccdf40e0a455e9fba5f7bfcb1ca8a2fd31ccd57c711caf15ee45
-size 3525
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book viewer</title>
+    <link rel="stylesheet" href="reader.css">
+</head>
+<body>
+    <!-- The little box you requested -->
+    <div id="upload-box">
+        <h3 style="color:white;">Load Book (EPUB)</h3>
+        <p style="font-size: 14px; color: #ffffff;">Select an .epub book to read in the browser:</p>
+        <button id="fileInput" style="padding: 6px 12px; cursor: pointer;">Open EPUB File</button>
+        
+        <hr style="margin: 15px 0; border: 0; border-top: 1px dashed #000000;" />
+        
+        <h3 style="color:white;">Sync Progress</h3>
+        <p style="font-size: 14px; color: #ffffff;">Load or create a .txt file to sync your page:</p>
+        
+        <div style="display: flex; gap: 10px; justify-content: center; margin-top: 10px;">
+            <button id="loadProgressBtn" style="padding: 6px 12px; cursor: pointer;">Load Sync File</button>
+            <button id="saveProgressBtn" style="padding: 6px 12px; cursor: pointer;">Save Page to Sync File</button>
+            <button id="refreshProgressBtn" style="padding: 6px 12px; cursor: pointer;" title="Reload the saved page location">↻</button>
+        </div>
+        <p id="syncStatus" style="font-size: 13px; color: #007bff; margin-top: 5px; min-height: 18px;"></p>
+
+        <hr style="margin: 15px 0; border: 0; border-top: 1px dashed #000000;" />
+        
+        <h3 style="color:white;">Chapters & Search</h3>
+        <select id="toc-select" style="width: 100%; padding: 5px; margin-bottom: 10px; box-sizing: border-box;">
+            <option value="">Select a chapter...</option>
+        </select>
+        
+        <div style="display: flex; gap: 5px; justify-content: center; margin-bottom: 5px;">
+            <input type="text" id="search-input" placeholder="Search text..." style="flex: 1; padding: 5px; box-sizing: border-box;" />
+            <button id="search-btn" style="padding: 5px 10px; cursor: pointer;">Search</button>
+        </div>
+        <ul id="search-results" style="list-style-type: none; padding: 0; margin: 0; max-height: 100px; overflow-y: auto; font-size: 12px; color: white;"></ul>
+
+        <br/>
+        <a href="./index.html" class="return-btn">Return Home</a>
+    </div>
+
+    <!-- Replaced the Canvas with a Div, as it is much better for displaying scrolling HTML text -->
+
+    <div id="book-viewer" style="color:white;">
+        <!-- Info Box for Time & Page -->
+        <div id="info-box">
+            <span id="time-display">--:--:--</span><br>
+            <span id="page-display">Page: -</span>
+        </div>
+
+        <!-- Overlay buttons placed inside the div -->
+        <button id="back" style="height:2000px;width: 130;margin-left:-15px;">page back</button>
+        <button id="next" style="height:2000px;width: 130;margin-right:-15px;">page next</button>
+        <button id="fullscreen" style="width: 90000px;height:200px;margin-top:-100px;">fullscreen</button>
+        <button id="Save" style="width: 90000px;height:30px;position:absolute;bottom:0;left:50%;transform:translateX(-50%);z-index:10;font-size:10px;padding:0;">Save</button>
+    </div>
+
+    <!-- Include epub.js (A lightweight, pure-JS library for reading epubs) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/epubjs/dist/epub.min.js"></script>
+
+    <!-- Load our separated logic -->
+    <script src="reader.js"></script>
+</body>
+</html>
