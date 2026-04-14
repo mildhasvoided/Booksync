@@ -5,6 +5,119 @@ const refreshProgressBtn = document.getElementById('refreshProgressBtn');
 const syncStatus = document.getElementById('syncStatus');
 const timeDisplay = document.getElementById('time-display');
 const pageDisplay = document.getElementById('page-display');
+const infoBox = document.getElementById('info-box');
+
+const clockHiddenOpacity = '0.3';
+const clockVisibleOpacity = '1';
+const clockFadeDelayMs = 10000;
+let infoBoxFadeTimeout = null;
+let isClockRevealHeld = false;
+
+function clearInfoBoxFadeTimer() {
+    window.clearTimeout(infoBoxFadeTimeout);
+    infoBoxFadeTimeout = null;
+}
+
+function isTypingTarget(target) {
+    return target instanceof HTMLElement && (
+        target.tagName === 'INPUT' ||
+        target.tagName === 'TEXTAREA' ||
+        target.tagName === 'SELECT' ||
+        target.isContentEditable
+    );
+}
+
+function showInfoBox() {
+    if (!infoBox) return;
+
+    infoBox.style.opacity = clockVisibleOpacity;
+}
+
+function scheduleInfoBoxFade() {
+    if (!infoBox) return;
+
+    clearInfoBoxFadeTimer();
+    infoBoxFadeTimeout = window.setTimeout(() => {
+        infoBox.style.opacity = clockHiddenOpacity;
+    }, clockFadeDelayMs);
+}
+
+function handleClockRevealPress() {
+    if (isClockRevealHeld) {
+        return;
+    }
+
+    isClockRevealHeld = true;
+    clearInfoBoxFadeTimer();
+    showInfoBox();
+}
+
+function handleClockRevealRelease() {
+    isClockRevealHeld = false;
+    scheduleInfoBoxFade();
+}
+
+function handleArrowNavigation(event) {
+    if (!rendition) {
+        return false;
+    }
+
+    if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        rendition.prev();
+        return true;
+    }
+
+    if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        rendition.next();
+        return true;
+    }
+
+    return false;
+}
+
+showInfoBox();
+scheduleInfoBoxFade();
+
+window.addEventListener('keydown', (event) => {
+    if (event.key !== 'Shift' || isTypingTarget(event.target)) {
+        return;
+    }
+
+    handleClockRevealPress();
+}, true);
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Shift' && !isTypingTarget(event.target)) {
+        handleClockRevealPress();
+        return;
+    }
+
+    handleArrowNavigation(event);
+});
+
+document.addEventListener('keyup', (event) => {
+    if (event.key !== 'Shift' || isTypingTarget(event.target)) {
+        return;
+    }
+
+    handleClockRevealRelease();
+});
+
+window.addEventListener('blur', () => {
+    if (!isClockRevealHeld) {
+        return;
+    }
+
+    handleClockRevealRelease();
+});
+
+document.addEventListener('visibilitychange', () => {
+    if (document.hidden && isClockRevealHeld) {
+        handleClockRevealRelease();
+    }
+});
 
 // Start the clock!
 function updateClock() {
@@ -54,6 +167,25 @@ fileInput.addEventListener('click', async () => {
         width: "100%", 
         height: "100%", 
         spread: "none" // Display as a single scrolling page/column
+    });
+
+    rendition.hooks.content.register((contents) => {
+        contents.document.addEventListener('keydown', (event) => {
+            if (event.key === 'Shift') {
+                handleClockRevealPress();
+                return;
+            }
+
+            if (handleArrowNavigation(event)) {
+                event.stopPropagation();
+            }
+        });
+
+        contents.document.addEventListener('keyup', (event) => {
+            if (event.key === 'Shift') {
+                handleClockRevealRelease();
+            }
+        });
     });
 
     // epub.js uses an iframe, so normal CSS doesn't apply. We must tell the rendition to override text styles:
@@ -364,16 +496,7 @@ window.addEventListener("resize", () => {
     }
 });
 
-// Add keyboard support for page flipping
-document.addEventListener('keyup', (event) => {
-    if (!rendition) return;
-
-    if (event.key === 'ArrowLeft') {
-        rendition.prev();
-    } else if (event.key === 'ArrowRight') {
-        rendition.next();
-    }
-});
+// Keyboard behavior is handled above so Shift reveals the clock and arrows always flip pages.
 
 // Search Logic
 document.getElementById("search-btn").addEventListener("click", function() {
