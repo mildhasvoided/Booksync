@@ -1,4 +1,3 @@
-Downloading <unknown file> (19 KB)
 const fileInput = document.getElementById('fileInput');
 const loadProgressBtn = document.getElementById('loadProgressBtn');
 const saveProgressBtn = document.getElementById('saveProgressBtn');
