@@ -4,7 +4,41 @@ const saveProgressBtn = document.getElementById('saveProgressBtn');
 const refreshProgressBtn = document.getElementById('refreshProgressBtn');
 const syncStatus = document.getElementById('syncStatus');
 const timeDisplay = document.getElementById('time-display');
+const batteryDisplay = document.getElementById('battery-display');
 const pageDisplay = document.getElementById('page-display');
+
+let batteryManager = null;
+
+function updateBatteryDisplay() {
+    if (!batteryDisplay) return;
+
+    if (!batteryManager) {
+        batteryDisplay.innerText = 'Battery: n/a';
+        return;
+    }
+
+    const batteryPercent = Math.round(batteryManager.level * 100);
+    const chargingSuffix = batteryManager.charging ? ' charging' : '';
+    batteryDisplay.innerText = `Battery: ${batteryPercent}%${chargingSuffix}`;
+}
+
+async function initializeBatteryDisplay() {
+    if (!('getBattery' in navigator)) {
+        updateBatteryDisplay();
+        return;
+    }
+
+    try {
+        batteryManager = await navigator.getBattery();
+        updateBatteryDisplay();
+
+        batteryManager.addEventListener('levelchange', updateBatteryDisplay);
+        batteryManager.addEventListener('chargingchange', updateBatteryDisplay);
+    } catch (error) {
+        console.warn('Battery status is unavailable.', error);
+        updateBatteryDisplay();
+    }
+}
 
 // Start the clock!
 function updateClock() {
@@ -13,6 +47,7 @@ function updateClock() {
 }
 setInterval(updateClock, 1000);
 updateClock();
+initializeBatteryDisplay();
 
 let book = ePub();
 let rendition;

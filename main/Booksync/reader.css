@@ -70,8 +70,8 @@
             text-align: center;
             line-height: 1.4;
             pointer-events: none; /* Let any clicks pass through it naturally */
-            height: 40px;
-            width: 120px;
+            min-height: 56px;
+            width: 150px;
             opacity: 0.3;
             transition: opacity 0.35s ease-in-out;
         }
